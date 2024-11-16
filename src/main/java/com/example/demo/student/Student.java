@@ -13,6 +13,14 @@ public class Student {
 
     }
     
+    public Student(Long id, String name, String email, LocalDate dob, Integer age) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.dob = dob;
+        this.age = age;
+    }
+    
     public Student(String name, String email, LocalDate dob, Integer age) {
         this.name = name;
         this.email = email;
@@ -20,12 +28,12 @@ public class Student {
         this.age = age;
     } 
 
-    public Student(Long id, String name, String email, LocalDate dob, Integer age) {
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
         this.id = id;
-        this.name = name;
-        this.email = email;
-        this.dob = dob;
-        this.age = age;
     }
 
     public String getName() {
@@ -62,12 +70,12 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student [id=" + id + 
-               ", name=" + name + 
-               ", email=" + email + 
+        return "Student{" + 
+               "id=" + id + 
+               ", name=" + name + '\'' + 
+               ", email=" + email + '\'' +
                ", dob=" + dob + 
-               ", age=" + age + "]";
-    }
-
-    
+               ", age=" + age + 
+               "}";
+    }   
 }
